@@ -1,0 +1,47 @@
+{
+  "name": "deliveryserviceapimodel",
+  "version": "1.0.0",
+  "description": "This package is to generate DeliveryServiceApiModel as well as provide client endpoint for connecting to DeliveryService",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc && npm run lint",
+    "watch": "tsc -w",
+    "lint": "eslint .",
+    "format": "npm run lint -- --fix",
+    "prepare": "husky",
+    "generate": "openapi --input ./openapi-spec.json --output ./generated --client xhr"
+  },
+  "bin": {
+    "generate-open-api-doc": "bin/generate-open-api-doc.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/congpham234/DeliveryServiceApiModel.git"
+  },
+  "keywords": [
+    "deliveryserviceapimodel"
+  ],
+  "author": "congph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/congpham234/DeliveryServiceApiModel/issues"
+  },
+  "homepage": "https://github.com/congpham234/DeliveryServiceApiModel#readme",
+  "devDependencies": {
+    "@types/node": "^20.11.14",
+    "@types/prettier": "2.6.0",
+    "@types/swagger-jsdoc": "^6.0.4",
+    "esbuild": "0.19.11",
+    "eslint": "^8.56.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-plugin-check-file": "^2.6.2",
+    "husky": "^9.0.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "shelljs": "^0.8.5",
+    "swagger-jsdoc": "^6.2.8"
+  }
+}
