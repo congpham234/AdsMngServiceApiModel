@@ -1,15 +1,15 @@
 const deliverySchema = {
   type: 'object',
   properties: {
-    OrderId: { type: 'string' },
-    DeliveryId: { type: 'string' },
-    DriverId: { type: 'string' },
-    DeliveryDate: { type: 'string', format: 'date-time' },
-    DeliveryStatus: { $ref: '#/components/schemas/DeliveryStatus' },
-    RecipientName: { type: 'string' },
-    RecipientAddress: { type: 'string' },
-    DeliveryInstructions: { $ref: '#/components/schemas/DeliveryInstructions' },
-    ProofOfDelivery: { type: 'string' },
+    orderId: { type: 'string' },
+    deliveryId: { type: 'string' },
+    driverId: { type: 'string' },
+    deliveryDate: { type: 'string', format: 'date-time' },
+    deliveryStatus: { $ref: '#/components/schemas/DeliveryStatus' },
+    recipientName: { type: 'string' },
+    recipientAddress: { type: 'string' },
+    deliveryInstructions: { $ref: '#/components/schemas/DeliveryInstructions' },
+    proofOfDelivery: { type: 'string' },
   },
 };
 
