@@ -4,8 +4,8 @@ const deliveryInstructionsEnum = require('./schemas/delivery-instructions-enum')
 const deliveryStatusEnum = require('./schemas/delivery-status-enum');
 const deliverySchema = require('./schemas/delivery-schema');
 const errorModel = require('./schemas/error-model');
-const internalServerError = require('./errors/internal-server-error');
-const deliveryNotFoundError = require('./errors/delivery-not-found-error');
+const internalServerError = require('./responses/internal-server-error');
+const deliveryNotFoundError = require('./responses/delivery-not-found-error');
 
 const components = {
   schemas: {
@@ -14,7 +14,7 @@ const components = {
     DeliveryInstructions: deliveryInstructionsEnum,
     ErrorModel: errorModel,
   },
-  errors: {
+  responses: {
     InternalServerError: internalServerError,
     DeliveryNotFoundError: deliveryNotFoundError
   }
