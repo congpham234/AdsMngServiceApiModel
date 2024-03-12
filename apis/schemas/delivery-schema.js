@@ -1,7 +1,6 @@
 const deliverySchema = {
   type: 'object',
   properties: {
-    orderId: { type: 'string' },
     deliveryId: { type: 'string' },
     driverId: { type: 'string' },
     deliveryDate: { type: 'string', format: 'date-time' },
