@@ -33,7 +33,7 @@ const apiDefinition = {
   },
   servers: [{ url: 'http://localhost:3000' }],
   paths: {
-    '/v1/delivery/{deliveryId}': deliveryPath,
+    '/v1/delivery': deliveryPath,
   },
   components: components,
 };
