@@ -12,10 +12,10 @@ const getDeliveryDoc = {
       },
     },
     '404': {
-      $ref: '#/components/errors/DeliveryNotFoundError'
+      $ref: '#/components/responses/DeliveryNotFoundError'
     },
     '500': {
-      $ref: '#/components/errors/InternalServerError'
+      $ref: '#/components/responses/InternalServerError'
     },
   },
   parameters: [
