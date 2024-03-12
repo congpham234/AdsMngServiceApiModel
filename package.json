@@ -1,6 +1,6 @@
 {
   "name": "deliveryserviceapimodel",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "This package is to generate DeliveryServiceApiModel as well as provide client endpoint for connecting to DeliveryService",
   "main": "index.js",
   "bin": {
