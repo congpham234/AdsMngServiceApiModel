@@ -3,13 +3,21 @@ const updateDeliveryDoc = require('./v1/update-delivery-doc');
 const deliveryInstructionsEnum = require('./schemas/delivery-instructions-enum');
 const deliveryStatusEnum = require('./schemas/delivery-status-enum');
 const deliverySchema = require('./schemas/delivery-schema');
+const errorModel = require('./schemas/error-model');
+const internalServerError = require('./errors/internal-server-error');
+const deliveryNotFoundError = require('./errors/delivery-not-found-error');
 
 const components = {
   schemas: {
     Delivery: deliverySchema,
     DeliveryStatus: deliveryStatusEnum,
     DeliveryInstructions: deliveryInstructionsEnum,
+    ErrorModel: errorModel,
   },
+  errors: {
+    InternalServerError: internalServerError,
+    DeliveryNotFoundError: deliveryNotFoundError
+  }
 };
 
 const deliveryPath = {
@@ -25,7 +33,7 @@ const apiDefinition = {
   },
   servers: [{ url: 'http://localhost:3000' }],
   paths: {
-    '/v1/delivery': deliveryPath,
+    '/v1/delivery/{deliveryId}': deliveryPath,
   },
   components: components,
 };

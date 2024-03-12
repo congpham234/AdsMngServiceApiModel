@@ -11,7 +11,24 @@ const getDeliveryDoc = {
         },
       },
     },
+    '404': {
+      $ref: '#/components/errors/DeliveryNotFoundError'
+    },
+    '500': {
+      $ref: '#/components/errors/InternalServerError'
+    },
   },
+  parameters: [
+    {
+      name: 'deliveryId',
+      in: 'query',
+      description: 'ID of the delivery',
+      required: true,
+      schema: {
+        type: 'string',
+      },
+    },
+  ],
 };
 
 module.exports = getDeliveryDoc;
