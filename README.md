@@ -14,8 +14,8 @@ generate-api-models
 
 
 4. to publish to npm:
-npm publish --access=public
+```npm publish --access=public```
 
 
-5.
-
+5. Change version:
+npm version 1.0.11
